@@ -1,0 +1,41 @@
+{
+    "name": "package-version-checker",
+    "version": "0.0.1",
+    "description": "Fix and check installed packages version",
+    "main": "index.js",
+    "bin": {
+        "pvc": "./index.js"
+    },
+    "scripts": {
+        "test": "eslint ./*.js"
+    },
+    "dependencies": {
+        "jsonfile": "latest",
+        "chalk": "latest",
+        "yargs": "latest"
+    },
+    "devDependencies": {
+        "eslint": "latest",
+        "eslint-config-airbnb-base": "latest",
+        "eslint-friendly-formatter": "latest",
+        "eslint-import-resolver-webpack": "latest",
+        "eslint-loader": "latest",
+        "eslint-plugin-html": "latest",
+        "eslint-plugin-import": "latest",
+        "eslint-plugin-promise": "latest"
+    },
+    "author": {
+        "name": "Aleksandr Korolev",
+        "email": "alexandr@korolev.email",
+        "url": "https://github.com/alexkorolev"
+    },
+    "engines": {
+        "node": ">=4.0.0",
+        "npm": ">=3.0.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/alekskorolev/package-version-checker.git"
+    },
+    "license": "MIT"
+}
