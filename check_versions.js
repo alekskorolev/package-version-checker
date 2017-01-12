@@ -3,8 +3,9 @@ const jsonfile = require('jsonfile');
 const fs = require('fs');
 const getDepVersions = require('./get_dep_versions');
 const chalk = require('chalk');
+const argv = require('yargs').argv;
 
-const debugMode = process.env.NODE_ENV === 'development';
+const debugMode = process.env.NODE_ENV === 'development' || argv.debug;
 
 function versionsNotMatch(saved, actual, packageName) {
     if (!saved) {

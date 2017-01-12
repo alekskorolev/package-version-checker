@@ -1,13 +1,21 @@
 #!/usr/bin/env node
-const argv = require('yargs').argv;
+const yargs = require('yargs');
 const checkVersions = require('./check_versions');
 const fixVersions = require('./fix_versions');
 
-const task = argv.task || process.env.NPM_VER_TASK;
+const argv = yargs
+    .alias('c', 'check')
+    .describe('c', 'check installed version packages')
+    .alias('f', 'fix')
+    .describe('f', 'fix installed version packages')
+    .alias('d', 'debug')
+    .describe('d', 'use warning instead error')
+    .help('help')
+    .argv;
 
-if (task === 'check') {
+if (argv.check) {
     checkVersions();
-} else if (task === 'fix') {
+} else if (argv.task) {
     fixVersions();
 }
 
