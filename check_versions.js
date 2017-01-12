@@ -32,6 +32,7 @@ function errorLog(msg) {
     if (debugMode) {
         console.warn('Error:', chalk.red(msg));
     } else {
+        process.exitCode = 1;
         throw new Error(chalk.red(msg));
     }
 }
