@@ -2,6 +2,8 @@
 
 Package version checker - tools for fix and check versions of installed node packages
 
+[![Build Status](https://travis-ci.org/alekskorolev/package-version-checker.svg?branch=master)](https://travis-ci.org/alekskorolev/package-version-checker)
+
 ## Install
 
 ```
