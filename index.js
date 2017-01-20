@@ -15,7 +15,7 @@ const argv = yargs
 
 if (argv.check) {
     checkVersions();
-} else if (argv.task) {
+} else if (argv.fix) {
     fixVersions();
 }
 
