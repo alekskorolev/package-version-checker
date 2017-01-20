@@ -24,7 +24,7 @@ function scanDependencies(rootPath, name) {
     const moduleNames = Object.keys(packageInfo.dependencies);
     const tree = {
         dependencies: {},
-        shaSum: packageInfo._shasum,
+        gitHead: packageInfo.gitHead,
         version: packageInfo.version
     };
     moduleNames.forEach(moduleName => {
