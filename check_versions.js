@@ -14,7 +14,7 @@ function versionsNotMatch(saved, actual, packageName) {
         console.error(chalk.red('Not exist package'));
         return true;
     } else if (((saved.gitHead || actual.gitHead) && saved.gitHead !== actual.gitHead) ||
-                (saved.version || actual.version) && saved.version !== actual.version)) {
+               ((saved.version || actual.version) && saved.version !== actual.version)) {
         console.error(chalk.red('Version of packages not match'));
         console.error(chalk.red(`Package name: ${packageName}`));
         return true;
