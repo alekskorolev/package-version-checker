@@ -21,7 +21,7 @@ function scanDependencies(rootPath, name) {
     if (!packageInfo) {
         return null;
     }
-    const moduleNames = Object.keys(packageInfo.dependencies);
+    const moduleNames = Object.keys(packageInfo.dependencies || {});
     const tree = {
         dependencies: {},
         gitHead: packageInfo.gitHead,
