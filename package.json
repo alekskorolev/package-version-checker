@@ -1,6 +1,6 @@
 {
     "name": "package-version-checker",
-    "version": "0.0.7",
+    "version": "0.0.8",
     "description": "Fix and check installed packages version",
     "main": "index.js",
     "bin": {

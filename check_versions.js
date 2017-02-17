@@ -11,12 +11,14 @@ function versionsNotMatch(saved, actual, packageName) {
     if (!saved) {
         return false;
     } else if (!actual) {
-        console.error(chalk.red('Not exist package'));
+        console.error(chalk.red(`Not exist required package ${packageName}`));
         return true;
     } else if (((saved.gitHead || actual.gitHead) && saved.gitHead !== actual.gitHead) ||
                ((saved.version || actual.version) && saved.version !== actual.version)) {
         console.error(chalk.red('Version of packages not match'));
         console.error(chalk.red(`Package name: ${packageName}`));
+        console.error(chalk.red(`Package installed: v = ${actual.version}, git head = ${actual.gitHead}`));
+        console.error(chalk.red(`Package required: v = ${saved.version}, git head = ${saved.gitHead}`));
         return true;
     }
     const keys = Object.keys(saved.dependencies).concat(Object.keys(actual.dependencies));
